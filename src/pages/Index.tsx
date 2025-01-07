@@ -2,6 +2,7 @@ import React from 'react';
 import TweetAnalysis from '../components/TweetAnalysis';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
+import { X } from 'lucide-react';
 
 const tweetData = [
   {
@@ -28,7 +29,15 @@ const Index = () => {
   ]);
 
   return (
-    <div className="min-h-screen bg-dark text-white">
+    <div className="min-h-screen bg-dark text-white relative">
+      <a 
+        href="https://x.com/SignalAI_" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="absolute top-4 right-4 p-2 rounded-full hover:bg-white/10 transition-colors"
+      >
+        <X size={24} className="text-white" />
+      </a>
       <div className="container mx-auto px-4 py-12">
         <header className="text-center mb-16">
           <div className="flex flex-col items-center gap-6">
