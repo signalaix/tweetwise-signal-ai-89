@@ -2,6 +2,16 @@ import React from 'react';
 import TweetAnalysis from '../components/TweetAnalysis';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogCancel,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
 
 const tweetData = [
   {
@@ -76,6 +86,25 @@ const Index = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="mt-16 text-center">
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button size="lg" className="bg-gradient-to-r from-neon-purple to-neon-blue hover:opacity-90">
+                Create Custom Signal Agent
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Coming Soon!</AlertDialogTitle>
+                <AlertDialogDescription>
+                  Custom Signal Agents are currently in development. Stay tuned for updates!
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogCancel>Close</AlertDialogCancel>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       </div>
     </div>
