@@ -33,7 +33,7 @@ const Index = () => {
         <header className="text-center mb-16">
           <div className="flex flex-col items-center gap-12">
             <img 
-              src="signal-logo.png" 
+              src="https://i.imgur.com/ASm6S3t.png" 
               alt="Signal Logo" 
               className="w-20 h-20"
             />
