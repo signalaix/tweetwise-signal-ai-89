@@ -57,6 +57,13 @@ const Index = () => {
     })
   ]);
 
+  // Shuffle the tweets array on component mount
+  const shuffledTweets = React.useMemo(() => {
+    return [...tweetData].sort(() => Math.random() - 0.5);
+  }, []);
+
+  console.log('Tweets shuffled, new order:', shuffledTweets.map(tweet => tweet.url));
+
   return (
     <div className="min-h-screen bg-dark text-white relative">
       <a 
@@ -93,7 +100,7 @@ const Index = () => {
         <div className="max-w-3xl mx-auto">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
-              {tweetData.map((tweet, index) => (
+              {shuffledTweets.map((tweet, index) => (
                 <div 
                   key={index} 
                   className="flex-[0_0_100%] min-w-0"
