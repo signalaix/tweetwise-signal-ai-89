@@ -93,9 +93,25 @@ const Index = () => {
               <h1 className="text-6xl font-bold bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent inline-block leading-relaxed">
                 SignalAI
               </h1>
-              <p className="text-xl text-white/70">
+              <p className="text-xl text-white/70 mb-8">
                 AI-Powered Crypto Intelligence of Key Opinion Leaders
               </p>
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <Button size="lg" className="bg-gradient-to-r from-neon-purple to-neon-blue hover:opacity-90">
+                    Create Custom Signal Agent
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>Coming Soon!</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      Custom Signal Agents are currently in development. Stay tuned for updates!
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogCancel>Close</AlertDialogCancel>
+                </AlertDialogContent>
+              </AlertDialog>
             </div>
           </div>
         </header>
@@ -116,25 +132,6 @@ const Index = () => {
               ))}
             </div>
           </div>
-        </div>
-
-        <div className="mt-8 text-center">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <Button size="lg" className="bg-gradient-to-r from-neon-purple to-neon-blue hover:opacity-90">
-                Create Custom Signal Agent
-              </Button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>Coming Soon!</AlertDialogTitle>
-                <AlertDialogDescription>
-                  Custom Signal Agents are currently in development. Stay tuned for updates!
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogCancel>Close</AlertDialogCancel>
-            </AlertDialogContent>
-          </AlertDialog>
         </div>
       </div>
     </div>
