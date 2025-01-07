@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import TweetAnalysis from '../components/TweetAnalysis';
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import useEmblaCarousel from 'embla-carousel-react';
@@ -16,13 +16,17 @@ const tweetData = [
 ];
 
 const Index = () => {
-  const [api] = useEmblaCarousel(
-    { 
-      loop: true,
-      duration: 50,
-    },
-    [Autoplay({ delay: 5000, stopOnInteraction: false })]
-  );
+  const [emblaRef] = useEmblaCarousel({ 
+    loop: true,
+    duration: 50,
+    dragFree: true
+  }, [
+    Autoplay({ 
+      delay: 5000,
+      stopOnInteraction: false,
+      playOnInit: true
+    })
+  ]);
 
   return (
     <div className="min-h-screen bg-dark text-white">
@@ -37,25 +41,21 @@ const Index = () => {
         </header>
 
         <div className="max-w-3xl mx-auto">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            ref={api}
-            className="w-full"
-          >
-            <CarouselContent>
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
               {tweetData.map((tweet, index) => (
-                <CarouselItem key={index}>
+                <div 
+                  key={index} 
+                  className="flex-[0_0_100%] min-w-0"
+                >
                   <TweetAnalysis
                     tweetUrl={tweet.url}
                     analysis={tweet.analysis}
                   />
-                </CarouselItem>
+                </div>
               ))}
-            </CarouselContent>
-          </Carousel>
+            </div>
+          </div>
         </div>
       </div>
     </div>
