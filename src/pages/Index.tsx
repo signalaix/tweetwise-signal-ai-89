@@ -42,7 +42,7 @@ const Index = () => {
                 SignalAI
               </h1>
               <p className="text-xl text-white/70">
-                AI-Powered Crypto Intelligence from Key Opinion Leaders
+                AI-Powered Crypto Intelligence of Key Opinion Leaders
               </p>
             </div>
           </div>
