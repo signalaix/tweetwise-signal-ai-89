@@ -41,6 +41,10 @@ const tweetData = [
   {
     url: "https://x.com/BTCTN/status/1876530200550535382",
     analysis: "MiniPerplx ($MPLX) is an example of false partnership claims fueling hype, leading to a pump-and-dump scenario. This highlights the need to verify claims before investing. Avoid projects with questionable transparency, especially in the hot AI narrative space."
+  },
+  {
+    url: "https://x.com/AJ__912/status/1876541329682976840",
+    analysis: "$STREAM leans heavily on an abstract, poetic narrative driven by AI creativity, appealing to a niche audience captivated by experimental storytelling and self-referential themes. Its potential 20x return is speculative and reliant on narrative momentum rather than clear utility. Consider this a high-risk play for those drawn to lore-driven memecoins."
   }
 ];
 
