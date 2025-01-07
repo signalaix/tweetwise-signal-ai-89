@@ -1,11 +1,39 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import TweetAnalysis from '../components/TweetAnalysis';
+
+const tweetData = [
+  {
+    url: "https://x.com/RyanWatkins_/status/1876479076627849615",
+    analysis: "Jensen Huang emphasizes AI agents as a multi-trillion dollar market, driven by advancements in agentic and physical AI. Focus on projects leading in robotics, customer service, and related AI infrastructure."
+  },
+  {
+    url: "https://x.com/mrpunkdoteth/status/1876495944877019537",
+    analysis: "#BEINGAI appears to be a strong play in the AI agent meta, focusing on productivity tools powered by LLMs like Olama. Its specialized agents (e.g., Data Analyst Pro, Code Assistant) position it as a versatile platform with real-world utility. Consider investing early if the project shows traction and adoption potential."
+  }
+];
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-dark text-white">
+      <div className="container mx-auto px-4 py-12">
+        <header className="text-center mb-16">
+          <h1 className="text-6xl font-bold bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent mb-4">
+            SignalAI
+          </h1>
+          <p className="text-xl text-white/70">
+            AI-Powered Crypto Intelligence from Key Opinion Leaders
+          </p>
+        </header>
+
+        <div className="max-w-3xl mx-auto">
+          {tweetData.map((tweet, index) => (
+            <TweetAnalysis
+              key={index}
+              tweetUrl={tweet.url}
+              analysis={tweet.analysis}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
