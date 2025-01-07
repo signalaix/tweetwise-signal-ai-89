@@ -2,7 +2,6 @@ import React from 'react';
 import TweetAnalysis from '../components/TweetAnalysis';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { X } from 'lucide-react';
 
 const tweetData = [
   {
@@ -36,7 +35,11 @@ const Index = () => {
         rel="noopener noreferrer"
         className="absolute top-4 right-4 p-2 rounded-full hover:bg-white/10 transition-colors"
       >
-        <X size={24} className="text-white" />
+        <img 
+          src="https://i.imgur.com/WtoVcGU.png" 
+          alt="X (Twitter)" 
+          className="w-6 h-6"
+        />
       </a>
       <div className="container mx-auto px-4 py-12">
         <header className="text-center mb-16">
