@@ -24,7 +24,7 @@ const TweetAnalysis = ({ tweetUrl, analysis }: TweetAnalysisProps) => {
         setIsTyping(false);
         clearInterval(typingInterval);
       }
-    }, 50);
+    }, 25); // Reduced from 50ms to 25ms for faster typing
 
     return () => clearInterval(typingInterval);
   }, [analysis]);

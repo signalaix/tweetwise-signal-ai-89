@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TweetAnalysis from '../components/TweetAnalysis';
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const tweetData = [
   {
@@ -13,6 +16,14 @@ const tweetData = [
 ];
 
 const Index = () => {
+  const [api] = useEmblaCarousel(
+    { 
+      loop: true,
+      duration: 50,
+    },
+    [Autoplay({ delay: 5000, stopOnInteraction: false })]
+  );
+
   return (
     <div className="min-h-screen bg-dark text-white">
       <div className="container mx-auto px-4 py-12">
@@ -26,13 +37,25 @@ const Index = () => {
         </header>
 
         <div className="max-w-3xl mx-auto">
-          {tweetData.map((tweet, index) => (
-            <TweetAnalysis
-              key={index}
-              tweetUrl={tweet.url}
-              analysis={tweet.analysis}
-            />
-          ))}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            ref={api}
+            className="w-full"
+          >
+            <CarouselContent>
+              {tweetData.map((tweet, index) => (
+                <CarouselItem key={index}>
+                  <TweetAnalysis
+                    tweetUrl={tweet.url}
+                    analysis={tweet.analysis}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </div>
