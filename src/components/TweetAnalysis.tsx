@@ -8,13 +8,44 @@ interface TweetAnalysisProps {
 
 const TweetAnalysis = ({ tweetUrl, analysis }: TweetAnalysisProps) => {
   const [displayedText, setDisplayedText] = useState('');
-  const [isTyping, setIsTyping] = useState(true);
+  const [isTyping, setIsTyping] = useState(false);
+  const [hasStartedTyping, setHasStartedTyping] = useState(false);
 
-  // Reset and restart animation when tweet/analysis changes
+  // Function to handle intersection observer callback
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !hasStartedTyping) {
+        console.log('Tweet became visible, starting animation');
+        setIsTyping(true);
+        setHasStartedTyping(true);
+        startTypewriterAnimation();
+      }
+    });
+  };
+
+  // Set up intersection observer when component mounts
   useEffect(() => {
-    console.log('Analysis changed, restarting typewriter animation');
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5, // Trigger when 50% of the element is visible
+    });
+
+    // Get the current element
+    const element = document.getElementById(`tweet-${getTweetId(tweetUrl)}`);
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, [tweetUrl, hasStartedTyping]);
+
+  // Function to start typewriter animation
+  const startTypewriterAnimation = () => {
+    console.log('Starting typewriter animation');
     setDisplayedText(''); // Reset the text
-    setIsTyping(true); // Reset typing state
     
     let currentText = '';
     const textArray = analysis.split('');
@@ -32,7 +63,7 @@ const TweetAnalysis = ({ tweetUrl, analysis }: TweetAnalysisProps) => {
     }, 25);
 
     return () => clearInterval(typingInterval);
-  }, [analysis]); // Dependency on analysis ensures animation restarts when tweet changes
+  };
 
   // Improved tweet ID extraction
   const getTweetId = (url: string) => {
@@ -47,7 +78,10 @@ const TweetAnalysis = ({ tweetUrl, analysis }: TweetAnalysisProps) => {
   const tweetId = getTweetId(tweetUrl);
 
   return (
-    <div className="mb-12 p-6 rounded-lg bg-opacity-10 bg-white backdrop-blur-md border border-neon-purple/20 hover:border-neon-purple/40 transition-all duration-300">
+    <div 
+      id={`tweet-${tweetId}`}
+      className="mb-12 p-6 rounded-lg bg-opacity-10 bg-white backdrop-blur-md border border-neon-purple/20 hover:border-neon-purple/40 transition-all duration-300"
+    >
       <div className="mb-6">
         <Tweet id={tweetId} />
       </div>
