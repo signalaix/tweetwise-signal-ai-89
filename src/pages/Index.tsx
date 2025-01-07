@@ -21,6 +21,14 @@ const tweetData = [
   {
     url: "https://x.com/mrpunkdoteth/status/1876495944877019537",
     analysis: "#BEINGAI appears to be a strong play in the AI agent meta, focusing on productivity tools powered by LLMs like Olama. Its specialized agents (e.g., Data Analyst Pro, Code Assistant) position it as a versatile platform with real-world utility. Consider investing early if the project shows traction and adoption potential."
+  },
+  {
+    url: "https://x.com/The__Solstice/status/1876479485987651749",
+    analysis: "Agent $S leverages its unique position as the dominant AI coin on SUI, combining a compelling narrative with a focus on blockchain security and decentralization. Its utility-driven roadmap and alignment with the growing SUI ecosystem make it an intriguing speculative investment. Ideal for those seeking early exposure to niche blockchain AI projects."
+  },
+  {
+    url: "https://x.com/blocknewsdotcom/status/1876433263293792688",
+    analysis: "$MLG leverages nostalgic gaming culture and meme appeal, aligning with the humor-driven Solana memecoin trend. Its fun branding and accessible buying process could attract retail traders, but its long-term success depends on maintaining community engagement and hype. Consider it a high-risk, short-term play."
   }
 ];
 
