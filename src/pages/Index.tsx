@@ -38,7 +38,7 @@ const Index = () => {
         <img 
           src="https://i.imgur.com/WtoVcGU.png" 
           alt="X (Twitter)" 
-          className="w-6 h-6"
+          className="w-12 h-12"
         />
       </a>
       <div className="container mx-auto px-4 py-12">
