@@ -52,7 +52,7 @@ const Index = () => {
   const [emblaRef] = useEmblaCarousel({ 
     loop: true,
     duration: 50,
-    dragFree: false  // This is the correct property to disable dragging
+    draggable: false  // Completely disable dragging
   }, [
     Autoplay({ 
       delay: 5000,
