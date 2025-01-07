@@ -10,7 +10,12 @@ const TweetAnalysis = ({ tweetUrl, analysis }: TweetAnalysisProps) => {
   const [displayedText, setDisplayedText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
 
+  // Reset and restart animation when tweet/analysis changes
   useEffect(() => {
+    console.log('Analysis changed, restarting typewriter animation');
+    setDisplayedText(''); // Reset the text
+    setIsTyping(true); // Reset typing state
+    
     let currentText = '';
     const textArray = analysis.split('');
     let currentIndex = 0;
@@ -27,7 +32,7 @@ const TweetAnalysis = ({ tweetUrl, analysis }: TweetAnalysisProps) => {
     }, 25);
 
     return () => clearInterval(typingInterval);
-  }, [analysis]);
+  }, [analysis]); // Dependency on analysis ensures animation restarts when tweet changes
 
   // Improved tweet ID extraction
   const getTweetId = (url: string) => {
