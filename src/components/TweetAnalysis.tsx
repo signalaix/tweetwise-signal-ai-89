@@ -4,9 +4,11 @@ import { Tweet } from 'react-tweet';
 interface TweetAnalysisProps {
   tweetUrl: string;
   analysis: string;
+  onTypingComplete?: () => void;
+  onTypingStart?: () => void;
 }
 
-const TweetAnalysis = ({ tweetUrl, analysis }: TweetAnalysisProps) => {
+const TweetAnalysis = ({ tweetUrl, analysis, onTypingComplete, onTypingStart }: TweetAnalysisProps) => {
   const [displayedText, setDisplayedText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
 
@@ -15,6 +17,7 @@ const TweetAnalysis = ({ tweetUrl, analysis }: TweetAnalysisProps) => {
     console.log('Analysis changed, restarting typewriter animation');
     setDisplayedText(''); // Reset the text
     setIsTyping(true); // Reset typing state
+    onTypingStart?.(); // Notify parent that typing has started
     
     let currentText = '';
     const textArray = analysis.split('');
@@ -27,12 +30,13 @@ const TweetAnalysis = ({ tweetUrl, analysis }: TweetAnalysisProps) => {
         currentIndex++;
       } else {
         setIsTyping(false);
+        onTypingComplete?.(); // Notify parent that typing is complete
         clearInterval(typingInterval);
       }
     }, 25);
 
     return () => clearInterval(typingInterval);
-  }, [analysis]); // Dependency on analysis ensures animation restarts when tweet changes
+  }, [analysis, onTypingComplete, onTypingStart]); // Added callbacks to dependencies
 
   // Improved tweet ID extraction
   const getTweetId = (url: string) => {
