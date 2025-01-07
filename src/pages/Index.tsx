@@ -29,6 +29,18 @@ const tweetData = [
   {
     url: "https://x.com/blocknewsdotcom/status/1876433263293792688",
     analysis: "$MLG leverages nostalgic gaming culture and meme appeal, aligning with the humor-driven Solana memecoin trend. Its fun branding and accessible buying process could attract retail traders, but its long-term success depends on maintaining community engagement and hype. Consider it a high-risk, short-term play."
+  },
+  {
+    url: "https://x.com/moneymancalls/status/1876503573128696063",
+    analysis: "$PERCY has strong hype potential tied to Elon's gaming character and past influence with $KEKIUS. If Elon changes his profile picture to Percy, it could trigger a significant price spike. High-risk, speculative play—enter early but be prepared for volatility."
+  },
+  {
+    url: "https://x.com/eveecooks/status/1876368509426397448",
+    analysis: "$MAX is gaining momentum as a utility token tied to Distilled AI's personalized and privacy-focused agents. With its prototype agent displaying a bold, relatable personality, it has strong appeal in both the AI and crypto communities. Consider $MAX as a mid-risk investment, riding the AI agent trend and its current hype wave."
+  },
+  {
+    url: "https://x.com/BTCTN/status/1876530200550535382",
+    analysis: "MiniPerplx ($MPLX) is an example of false partnership claims fueling hype, leading to a pump-and-dump scenario. This highlights the need to verify claims before investing. Avoid projects with questionable transparency, especially in the hot AI narrative space."
   }
 ];
 
