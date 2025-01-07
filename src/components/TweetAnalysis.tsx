@@ -59,6 +59,11 @@ const TweetAnalysis = ({ tweetUrl, analysis }: TweetAnalysisProps) => {
       } else {
         setIsTyping(false);
         clearInterval(typingInterval);
+        // Add delay before allowing next transition
+        setTimeout(() => {
+          console.log('Animation complete, ready for next transition');
+          // You could add additional state here if needed
+        }, 1500); // 1.5 second delay
       }
     }, 25);
 
