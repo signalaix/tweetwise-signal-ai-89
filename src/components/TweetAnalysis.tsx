@@ -24,17 +24,27 @@ const TweetAnalysis = ({ tweetUrl, analysis }: TweetAnalysisProps) => {
         setIsTyping(false);
         clearInterval(typingInterval);
       }
-    }, 25); // Reduced from 50ms to 25ms for faster typing
+    }, 25);
 
     return () => clearInterval(typingInterval);
   }, [analysis]);
 
-  const tweetId = tweetUrl.split('/').pop();
+  // Improved tweet ID extraction
+  const getTweetId = (url: string) => {
+    // Remove any trailing slashes or query parameters
+    const cleanUrl = url.split('?')[0].replace(/\/$/, '');
+    // Get the last segment of the URL
+    const lastSegment = cleanUrl.split('/').pop();
+    console.log('Extracted tweet ID:', lastSegment); // Debug log
+    return lastSegment || '';
+  };
+
+  const tweetId = getTweetId(tweetUrl);
 
   return (
     <div className="mb-12 p-6 rounded-lg bg-opacity-10 bg-white backdrop-blur-md border border-neon-purple/20 hover:border-neon-purple/40 transition-all duration-300">
       <div className="mb-6">
-        <Tweet id={tweetId || ''} />
+        <Tweet id={tweetId} />
       </div>
       <div className="relative">
         <div className="flex items-center mb-2">
