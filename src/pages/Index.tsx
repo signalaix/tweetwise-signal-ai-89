@@ -31,17 +31,17 @@ const Index = () => {
     <div className="min-h-screen bg-dark text-white">
       <div className="container mx-auto px-4 py-12">
         <header className="text-center mb-16">
-          <div className="flex flex-col items-center gap-6">
+          <div className="flex flex-col items-center gap-8">
             <img 
-              src="/signal-logo.png" 
+              src="signal-logo.png" 
               alt="Signal Logo" 
-              className="w-24 h-24 mb-2"
+              className="w-24 h-24"
             />
-            <div>
-              <h1 className="text-6xl font-bold bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent inline-block">
+            <div className="space-y-4">
+              <h1 className="text-6xl font-bold bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent inline-block leading-normal">
                 SignalAI
               </h1>
-              <p className="text-xl text-white/70 mt-4">
+              <p className="text-xl text-white/70">
                 AI-Powered Crypto Intelligence from Key Opinion Leaders
               </p>
             </div>
