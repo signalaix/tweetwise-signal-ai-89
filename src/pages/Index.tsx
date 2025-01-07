@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TweetAnalysis from '../components/TweetAnalysis';
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import useEmblaCarousel from 'embla-carousel-react';
@@ -16,18 +16,15 @@ const tweetData = [
 ];
 
 const Index = () => {
-  const [isTyping, setIsTyping] = useState(true);
-
   const [emblaRef] = useEmblaCarousel({ 
     loop: true,
     duration: 50,
     dragFree: true
   }, [
     Autoplay({ 
-      delay: isTyping ? 10000 : 1500, // Wait longer while typing, then 1.5s after completion
+      delay: 5000,
       stopOnInteraction: false,
-      playOnInit: true,
-      rootNode: (emblaRoot) => emblaRoot.parentElement,
+      playOnInit: true
     })
   ]);
 
@@ -54,8 +51,6 @@ const Index = () => {
                   <TweetAnalysis
                     tweetUrl={tweet.url}
                     analysis={tweet.analysis}
-                    onTypingComplete={() => setIsTyping(false)}
-                    onTypingStart={() => setIsTyping(true)}
                   />
                 </div>
               ))}
