@@ -61,7 +61,6 @@ const Index = () => {
     })
   ]);
 
-  // Shuffle the tweets array on component mount
   const shuffledTweets = React.useMemo(() => {
     return [...tweetData].sort(() => Math.random() - 0.5);
   }, []);
@@ -119,7 +118,7 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-8 text-center">
           <AlertDialog>
             <AlertDialogTrigger asChild>
               <Button size="lg" className="bg-gradient-to-r from-neon-purple to-neon-blue hover:opacity-90">
