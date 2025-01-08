@@ -61,6 +61,10 @@ const tweetData = [
   {
     url: "https://x.com/TheSolaAI/status/1877068598356631815",
     analysis: "$SOLA combines the AI assistant meta with the Solana ecosystem, offering real utility through voice-command blockchain interactions. The rapid rise to $15M market cap signals strong initial interest, but long-term success hinges on adoption by Solana users. Promising, but high-risk due to early-stage volatility."
+  },
+  {
+    url: "https://x.com/cryptolyxe/status/1877063222039134249",
+    analysis: "$DAIGE cleverly combines the AI and meme coin narratives, playing on Doge's success with a futuristic twist. At $30M market cap, it has room to grow if the community builds momentum toward the $100M target. High-risk, speculative play reliant on narrative and engagement."
   }
 ];
 
