@@ -45,6 +45,18 @@ const tweetData = [
   {
     url: "https://x.com/AJ__912/status/1876541329682976840",
     analysis: "$STREAM leans heavily on an abstract, poetic narrative driven by AI creativity, appealing to a niche audience captivated by experimental storytelling and self-referential themes. Its potential 20x return is speculative and reliant on narrative momentum rather than clear utility. Consider this a high-risk play for those drawn to lore-driven memecoins."
+  },
+  {
+    url: "https://x.com/SmokezXBT/status/1877047554786898071",
+    analysis: "$LLM capitalized on the humor of its \"large language model\" theme and defied FUD about bundled wallets to hit a $100M market cap. Memecoins thrive on narrative and hype, so focus on community strength and momentum for short-term gains. High risk, but momentum could continue if the meme sticks."
+  },
+  {
+    url: "https://x.com/rasmr_eth/status/1877098132346941861",
+    analysis: "Hive AI is positioning itself as a leader in merging AI with DeFi through a modular network of agents, supported by a proven founder and strategic partnerships. Its focus on on-chain interoperability makes it a strong player in the AI infrastructure narrative. Mid- to high-risk, but worth watching for adoption in the growing DeFi-AI space."
+  },
+  {
+    url: "https://x.com/Poe_Ether/status/1877112931168526659",
+    analysis: "With $POPPY following a similar baby hippo narrative, and Moo Deng's success at $400M market cap last year, there's clear precedent for strong upside potential. If $POPPY maintains its momentum and attracts similar community hype, it could replicate or exceed Moo Deng's performance. High-risk, but a proven narrative."
   }
 ];
 
