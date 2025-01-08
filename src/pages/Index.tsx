@@ -57,6 +57,10 @@ const tweetData = [
   {
     url: "https://x.com/Poe_Ether/status/1877112931168526659",
     analysis: "With $POPPY following a similar baby hippo narrative, and Moo Deng's success at $400M market cap last year, there's clear precedent for strong upside potential. If $POPPY maintains its momentum and attracts similar community hype, it could replicate or exceed Moo Deng's performance. High-risk, but a proven narrative."
+  },
+  {
+    url: "https://x.com/TheSolaAI/status/1877068598356631815",
+    analysis: "$SOLA combines the AI assistant meta with the Solana ecosystem, offering real utility through voice-command blockchain interactions. The rapid rise to $15M market cap signals strong initial interest, but long-term success hinges on adoption by Solana users. Promising, but high-risk due to early-stage volatility."
   }
 ];
 
