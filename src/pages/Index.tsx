@@ -69,6 +69,18 @@ const tweetData = [
   {
     url: "https://x.com/Jeremyybtc/status/1878174310315053342",
     analysis: "$CWH benefits from the established success of Dogwifhat and its creator's reputation, quickly reaching $30M market cap. While the market is bearish, the connection to a previous $1.5B project could drive speculative interest. High-risk, but worth watching for potential community-driven growth."
+  },
+  {
+    url: "https://x.com/The__Solstice/status/1878179394185056510",
+    analysis: "$LIHUA benefits from being a standout project on the emerging XRP chain, capturing the most volume despite the chain's smaller market compared to Solana. Its unique branding around the Dragon Li cat and deflationary narrative adds meme and cultural appeal. High risk, but early adoption of the XRP chain could offer upside potential as the ecosystem matures."
+  },
+  {
+    url: "https://x.com/moneyl0rd/status/1878193637671997904",
+    analysis: "$GRIFFAIN is tackling a critical issue in crypto and AI by enabling agents to take autonomous on-chain actions via wallets, blending AI and Web3 utility. Its 400M market cap positions it as a strong player in the AI agent narrative, with the potential for further growth if mass adoption and partnerships materialize. High-risk, but the utility-driven approach and market positioning make it a compelling mid- to long-term play."
+  },
+  {
+    url: "https://x.com/SmokezXBT/status/1878155550719971361",
+    analysis: "FTX6900 is riding on the success of $LLM and SPX6900, leveraging humor and memecoin narratives with a fresh twist. Its quick bounce to 1M market cap shows strong community interest, but being only two days old, it remains highly volatile. High-risk play—enter cautiously and monitor community momentum for the next potential leg up."
   }
 ];
 
