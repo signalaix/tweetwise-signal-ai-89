@@ -65,6 +65,10 @@ const tweetData = [
   {
     url: "https://x.com/cryptolyxe/status/1877063222039134249",
     analysis: "$DAIGE cleverly combines the AI and meme coin narratives, playing on Doge's success with a futuristic twist. At $30M market cap, it has room to grow if the community builds momentum toward the $100M target. High-risk, speculative play reliant on narrative and engagement."
+  },
+  {
+    url: "https://x.com/Jeremyybtc/status/1878174310315053342",
+    analysis: "$CWH benefits from the established success of Dogwifhat and its creator's reputation, quickly reaching $30M market cap. While the market is bearish, the connection to a previous $1.5B project could drive speculative interest. High-risk, but worth watching for potential community-driven growth."
   }
 ];
 
